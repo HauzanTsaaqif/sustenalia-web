@@ -1,0 +1,542 @@
+@keyframes slide-in-top {
+    0% {
+      transform: translateY(-200px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  .background-blur-icon2 {
+    position: absolute;
+    top: 120px;
+    left: 0;
+    width: 100%;
+    height: 1000px;
+    opacity: 0.75;
+  }
+  .rodap2 {
+    position: absolute;
+    top: 753px;
+    left: -93px;
+    border-radius: 50%;
+    background-color: var(--color-mediumseagreen-100);
+    filter: blur(400px);
+    width: 476px;
+    height: 651px;
+  }
+  .white-bg1 {
+    position: absolute;
+    top: 0;
+    left: 418px;
+    background-color: var(--color-gray-900);
+    width: 740px;
+    height: 700px;
+  }
+  .rectangle-icon {
+    position: absolute;
+    top: 0;
+    left: 99px;
+    border-radius: var(--br-20xl);
+    width: 130px;
+    height: 41px;
+  }
+  .arsitek5,
+  .customer {
+    position: absolute;
+    top: 5px;
+    left: 120px;
+    font-size: var(--font-size-lg);
+    display: inline-block;
+    font-family: var(--font-poppins);
+    color: var(--color-black);
+    text-align: left;
+    width: 99px;
+    height: 21px;
+  }
+  .arsitek5 {
+    left: 20px;
+    color: var(--colors-white);
+    width: 69px;
+  }
+  .vector-group {
+    cursor: pointer;
+    border: 0;
+    padding: 0;
+    background-color: var(--color-mediumseagreen);
+    position: absolute;
+    top: 410px;
+    left: 650px;
+    border-radius: var(--br-20xl);
+    width: 229px;
+    height: 41px;
+  }
+  .daftar-akun {
+    position: absolute;
+    top: 100px;
+    left: 550px;
+    font-weight: 600;
+  }
+  .email-address1,
+  .full-name,
+  .password1 {
+    border: 0;
+    background-color: transparent;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: var(--font-poppins);
+    border-bottom: 2px solid rgba(161, 161, 161, 1);
+    outline: none;
+    padding-bottom: 3px;
+    left: 550px;
+    width: 464px;
+    height: 29px;
+  }
+  .full-name {
+    font-family: var(--font-poppins);
+    position: absolute;
+    top: 181px;
+  }
+  .email-address1 {
+    top: 257px;
+  }
+  .daftar5,
+  .email-address1,
+  .password1 {
+    position: absolute;
+    font-family: var(--font-poppins);
+  }
+  .password1 {
+    border: 0;
+    background-color: transparent;
+    font-weight: 500;
+    top: 333px;
+    left: 550px;
+    width: 464px;
+    height: 29px;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: var(--font-poppins);
+    border-bottom: 2px solid rgba(161, 161, 161, 1);
+    outline: none;
+  }
+
+  .full-name:focus, .email-address1:focus, .password1:focus{
+    color: rgba(255, 255, 255, 1);
+    border-bottom: 3px solid rgba(0, 203, 144, 1);
+    outline: none;
+  }
+
+  .daftar5 {
+    top: 8px;
+    left: 206px;
+    font-size: var(--paragraph-2-size);
+    font-weight: 600;
+    color: var(--colors-white);
+    text-align: center;
+  }
+  .button1 {
+    cursor: pointer;
+    border: 0;
+    padding: 0;
+    background-color: var(--color-mediumseagreen);
+    position: absolute;
+    top: 499px;
+    left: 550px;
+    border-radius: var(--br-7xs);
+    width: 464px;
+    height: 40px;
+  }
+  .button1.animate {
+    animation: 1s ease 0s 1 normal forwards slide-in-top;
+  }
+  .login4 {
+    color: var(--color-blue);
+  }
+  .sudah-punya-akun-container {
+    position: absolute;
+    top: 589px;
+    left: 550px;
+    font-size: var(--font-size-sm);
+    cursor: pointer;
+    color: var(--color-darkgray);
+  }
+  .rumah-berkelanjutan {
+    position: absolute;
+    top: 100px;
+    left: 16px;
+    font-size: var(--font-size-15xl);
+    line-height: 40px;
+    font-weight: 600;
+  }
+  .menghijaukan-masa-depan {
+    position: absolute;
+    top: 148px;
+    left: 16px;
+    font-size: var(--paragraph-2-size);
+    line-height: 25px;
+    font-family: var(--paragraph-2);
+    display: inline-block;
+    width: 341px;
+    height: 54px;
+  }
+  .d-rendering-cartoon-house-remo-icon1 {
+    position: absolute;
+    top: 230px;
+    left: 30px;
+    width: 550px;
+    height: 572px;
+    object-fit: cover;
+  }
+  .sign-up1 {
+    position: absolute;
+    top: 170px;
+    left: 152px;
+    background: linear-gradient(223.58deg, #01101f, #00cb90);
+    width: 1159px;
+    height: 700px;
+    overflow: hidden;
+  }
+  .artikel2 {
+    position: absolute;
+    top: 0;
+    left: 116px;
+    text-transform: capitalize;
+    font-weight: 500;
+    cursor: pointer;
+  }
+  .panduan2 {
+    left: 196px;
+    width: 114.39px;
+  }
+  .arsitek6,
+  .panduan2,
+  .tentang-kami2 {
+    position: absolute;
+    top: 0;
+    text-transform: capitalize;
+    font-weight: 500;
+    display: inline-block;
+  }
+  .arsitek6 {
+    left: 0;
+    width: 85.45px;
+    cursor: pointer;
+  }
+  .tentang-kami2 {
+    left: 304.59px;
+    width: 176.41px;
+  }
+  .menu2 {
+    position: absolute;
+    top: 54px;
+    left: 571px;
+    width: 481px;
+    height: 27px;
+  }
+  .daftar6,
+  .sustenalia5 {
+    position: absolute;
+    display: inline-block;
+  }
+  .sustenalia5 {
+    top: 33px;
+    left: 140px;
+    font-size: var(--font-size-41xl);
+    letter-spacing: 0.05em;
+    text-transform: capitalize;
+    font-family: var(--font-belleza);
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.38),
+      #00ff94 99.99%,
+      rgba(0, 255, 148, 0)
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    width: 407px;
+    height: 70px;
+  }
+  .daftar6 {
+    top: 3px;
+    left: 46.59px;
+    font-size: var(--font-size-mini);
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-family: var(--font-poppins);
+    color: var(--color-gray-200);
+    text-align: justify;
+    width: 113.41px;
+    height: 10.45px;
+  }
+  .getter-news4 {
+    cursor: pointer;
+    border: 0;
+    padding: 0;
+    background-color: var(--color-mediumseagreen);
+    position: absolute;
+    top: 53px;
+    left: 1064px;
+    border-radius: var(--br-31xl);
+    width: 159.29px;
+    height: 30px;
+  }
+  .sustenalia-3-icon2 {
+    position: absolute;
+    top: 18px;
+    left: 30px;
+    border-radius: var(--br-148xl);
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+  }
+  .getter-news5 {
+    cursor: pointer;
+    border: 0;
+    padding: 0;
+    background-color: var(--color-aqua-200);
+    position: absolute;
+    top: 54px;
+    left: 1244px;
+    border-radius: var(--br-31xl);
+    width: 159.29px;
+    height: 30px;
+  }
+  .bg-icon2,
+  .navigation-bar2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1440px;
+  }
+  .navigation-bar2 {
+    background-color: var(--color-black);
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.8);
+    height: 136px;
+    text-align: center;
+    font-size: var(--font-size-lg);
+    color: var(--color-whitesmoke);
+  }
+  .bg-icon2 {
+    height: 403px;
+    mix-blend-mode: overlay;
+  }
+  .sustenalia6 {
+    position: absolute;
+    top: 115px;
+    left: 173px;
+    font-size: var(--font-size-41xl);
+    letter-spacing: 0.05em;
+    text-transform: capitalize;
+    font-family: var(--font-montserrat);
+    background: linear-gradient(180deg, #00ffe0, rgba(0, 255, 148, 0));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+    display: inline-block;
+    width: 492px;
+    height: 71px;
+  }
+  .footbar-inner {
+    position: absolute;
+    top: 345.98px;
+    left: 157.5px;
+    border-top: 1px solid var(--color-darkslategray-100);
+    box-sizing: border-box;
+    width: 1171px;
+    height: 1px;
+  }
+  .login6,
+  .solusi-rumah-sehat3 {
+    position: absolute;
+    display: inline-block;
+  }
+  .solusi-rumah-sehat3 {
+    top: 215px;
+    left: 81px;
+    font-size: var(--font-size-3xs);
+    line-height: 25px;
+    text-transform: uppercase;
+    font-family: var(--font-inter);
+    color: var(--color-whitesmoke);
+    width: 531px;
+    height: 19px;
+  }
+  .login6 {
+    top: 114.48px;
+    line-height: 150%;
+    width: 81px;
+  }
+  .daftar7,
+  .login6,
+  .main2 {
+    left: 6px;
+    height: 23.12px;
+  }
+  .main2 {
+    position: absolute;
+    top: 149.15px;
+    line-height: 150%;
+    display: inline-block;
+    width: 92px;
+  }
+  .daftar7 {
+    top: 79.8px;
+    width: 71px;
+  }
+  .daftar7,
+  .home2,
+  .struktur-menu2,
+  .terms-and-condition2 {
+    position: absolute;
+    line-height: 150%;
+    display: inline-block;
+  }
+  .struktur-menu2 {
+    top: 0;
+    left: 0;
+    font-size: var(--font-size-lg);
+    font-weight: 500;
+    color: var(--color-mediumseagreen);
+    text-align: center;
+    width: 138px;
+    height: 26.01px;
+  }
+  .home2,
+  .terms-and-condition2 {
+    left: 6px;
+  }
+  .home2 {
+    top: 45.12px;
+    width: 48px;
+    height: 23.12px;
+    cursor: pointer;
+  }
+  .terms-and-condition2 {
+    top: 184px;
+    width: 171px;
+    height: 23px;
+  }
+  .links2 {
+    position: absolute;
+    top: 87px;
+    left: 991px;
+    width: 177px;
+    height: 207px;
+  }
+  .arsitek7,
+  .komunitas2,
+  .kontak2,
+  .newsletters2 {
+    position: absolute;
+    line-height: 150%;
+    display: inline-block;
+  }
+  .komunitas2 {
+    top: 0;
+    left: 0;
+    font-size: var(--font-size-lg);
+    font-weight: 500;
+    color: var(--color-mediumseagreen);
+    text-align: center;
+    width: 120px;
+    height: 26.01px;
+  }
+  .arsitek7,
+  .kontak2,
+  .newsletters2 {
+    top: 49.12px;
+    left: 11px;
+    width: 66px;
+    height: 23.12px;
+  }
+  .arsitek7,
+  .newsletters2 {
+    top: 83.8px;
+    width: 65px;
+  }
+  .newsletters2 {
+    top: 187.83px;
+    left: 17px;
+    display: none;
+    width: 93px;
+  }
+  .comunidade2 {
+    position: absolute;
+    top: 87px;
+    left: 1235px;
+    width: 120px;
+    height: 106.92px;
+  }
+  .social-media-icon3 {
+    position: absolute;
+    top: 378.26px;
+    left: 1043px;
+    width: 176px;
+    height: 20.23px;
+  }
+  .div3,
+  .hak-cipta3 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    line-height: 150%;
+    display: inline-block;
+    width: 71px;
+    height: 26.01px;
+  }
+  .div3 {
+    left: 108px;
+    font-family: var(--font-poppins);
+    width: 66px;
+  }
+  .copyright-1-icon3 {
+    position: absolute;
+    top: 6.74px;
+    left: 83px;
+    width: 16px;
+    height: 15.41px;
+    overflow: hidden;
+  }
+  .copyright3 {
+    position: absolute;
+    top: 375.37px;
+    left: 205px;
+    width: 174px;
+    height: 26.01px;
+    text-align: center;
+    font-size: var(--font-size-lg);
+    color: var(--color-gray-500);
+    font-family: var(--font-abel);
+  }
+  .sustenalia-4-icon2 {
+    position: absolute;
+    top: 83px;
+    left: 81px;
+    border-radius: var(--br-148xl);
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+  }
+  .footbar2 {
+    position: absolute;
+    top: 1103px;
+    left: 0;
+    width: 1440px;
+    height: 403px;
+    font-size: var(--paragraph-2-size);
+    color: var(--color-gray-400);
+  }
+  .daptar {
+    position: relative;
+    width: 100%;
+    height: 1000px;
+    overflow: hidden;
+    text-align: left;
+    font-size: var(--font-size-9xl);
+    color: var(--colors-white);
+    font-family: var(--font-poppins);
+  }
+  

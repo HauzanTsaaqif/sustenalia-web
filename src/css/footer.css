@@ -1,0 +1,67 @@
+.footbar{
+    background-color: rgba(6, 13, 10, 1);
+    height: max-content;
+    text-align: left;
+    font-size: var(--paragraph-2-size);
+    color: var(--color-gray-400);
+    margin-top: 3%;
+}
+
+.banner_footbar{
+    display: flex;
+    flex-direction: row;
+    padding: 5%;
+}
+
+.logo_footbar{
+    display: flex;
+    width: 70%;
+}
+
+.sustenalia-icon-footbar {
+    width: 64%;
+    padding-left: 4%;
+}
+
+.footbar_navigation{
+  display: flex;
+  width: 30%;
+}
+
+.footbar_navigation table{
+  padding: 0 0 0 10%;
+  border-collapse: separate;
+  width: 100%;
+}
+
+.footbar_navigation th{
+  font-size: 20px;
+  color: rgba(0, 203, 144, 1);
+  font-weight: 500;
+  padding-bottom: 6%;
+}
+
+.footbar_navigation td{
+  font-size: 18px;
+  color: rgba(255, 255, 255, 1);
+  font-weight: 400;
+  padding-bottom: 4%;
+}
+
+.copyright_container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.copyright_container p {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.footbar-child {
+  border-top: 1px solid rgba(63, 62, 69, 1);
+  box-sizing: border-box;
+  width: 80%;
+  margin-bottom: 2px;
+}
