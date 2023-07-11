@@ -4,6 +4,7 @@ import './index.css';
 import App from './App';
 import LoginPage from './pages/LoginPage';
 import SignupPage from './pages/SignupPage';
+import GeneratePage from './pages/GeneratePage';
 
 import reportWebVitals from './reportWebVitals';
 import ReactDOM from 'react-dom/client';
@@ -33,6 +34,10 @@ const router = createBrowserRouter([
   {
     path: "/signup-page",
     element: <SignupPage />,
+  },
+  {
+    path: "/generate-page",
+    element: <GeneratePage />,
   },
 ]);
 
