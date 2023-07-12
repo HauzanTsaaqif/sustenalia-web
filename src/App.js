@@ -21,7 +21,7 @@ function App() {
       <div className='container-cover'>
         
         <div className='image-overlay'>
-          <img src={process.env.TEST} alt='Quotes Cover'/>
+          <img src={process} alt='Quotes Cover'/>
         </div>
       </div>
 
@@ -34,7 +34,7 @@ function App() {
 
       <div className='trivia_1'>
         <article>
-          <h1>SUSTAINABILITY</h1>
+          <h1>{process.env.TEST}</h1>
           <p>Sustainability atau keberlanjutan adalah konsep yang berkaitan dengan memenuhi kebutuhan saat ini tanpa mengorbankan kemampuan generasi masa depan untuk memenuhi kebutuhan mereka. Ini melibatkan pengelolaan sumber daya secara bijaksana, melindungi lingkungan alami, dan mempertimbangkan dampak sosial dalam pengambilan keputusan.</p>
           <div className='layer_button'><Link to="/login-page"><button>MULAI</button></Link></div>
         </article>
