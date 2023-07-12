@@ -31,8 +31,6 @@ function GeneratePage() {
 
   const api_key = process.env.REACT_APP_API_KEY;
 
-  console.log("aaaa1" + test);
-
   const generatePrompt = () => {
     const endpoint = "https://api.openai.com/v1/completions";
     const API_KEY = api_key;
