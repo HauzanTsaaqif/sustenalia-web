@@ -5,6 +5,8 @@ import React, { useState } from 'react';
 import { Box, Slider } from "@mui/material";
 import axios from 'axios';
 
+require('dotenv').config();
+
 import bg_blur from '../assets/background-blur.svg';
 import bg_img_login from '../assets/8018276removebgpreview-1@2x.png';
 import mapsearch from '../assets/mdimapsearch.svg';
@@ -30,11 +32,10 @@ function GeneratePage() {
 
   const generatePrompt = () => {
     const endpoint = "https://api.openai.com/v1/completions";
-    const API_KEY = "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";
+    const API_KEY = process.env.API_KEY;
     const model_engine = "text-davinci-003";
-    console.log(inputRegion);
     const prompt =
-      "saya tinggal di "+ inputRegion +", berikan saya saran rumah yang ramah lingkungan yang berkelanjutan sesuai dengan daerah tempat tinggal saya, jelaskan dengan 5 poin yaitu mengenai material rumah, energi rumah, sanitasi, pengelolaan limbah, dan ventilasi. pisahkan setiap poin dengan tanda ;";
+      "saya tinggal di Purwakarta di Ciganea, berikan saya saran rumah yang ramah lingkungan yang berkelanjutan sesuai dengan daerah tempat tinggal saya, jelaskan dengan 5 poin yaitu mengenai material rumah, energi rumah, sanitasi, pengelolaan limbah, dan ventilasi";
 
     axios
       .post(
@@ -56,10 +57,7 @@ function GeneratePage() {
       .then((response) => {
         if (response.status === 200) {
           const result = response.data.choices[0].text.trim();
-          setResultGenerate(result);
-          const finalResult  = resultGenerate.split(";");
           console.log(result);
-          console.log(finalResult);
         } else {
           throw new Error('API request failed');
         }
