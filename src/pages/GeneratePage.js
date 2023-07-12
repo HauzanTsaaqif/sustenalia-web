@@ -31,8 +31,6 @@ function GeneratePage() {
 
   let num = 1;
 
-  console.log(process.env.API_KEY)
-
   const generatePrompt = () => {
     const endpoint = "https://api.openai.com/v1/completions";
     const API_KEY = "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";
