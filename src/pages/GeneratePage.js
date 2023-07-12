@@ -29,13 +29,13 @@ function GeneratePage() {
 
   let num = 1;
 
-  const test = process.env.POSTGRES_DATABASE;
+  const api_key = process.env.REACT_APP_API_KEY;
 
   console.log("aaaa1" + test);
 
   const generatePrompt = () => {
     const endpoint = "https://api.openai.com/v1/completions";
-    const API_KEY = "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";
+    const API_KEY = api_key;
     const model_engine = "text-davinci-003";
     const prompt =
       "Berikan saya saran rumah yang ramah lingkungan dan berkelanjutan jika saya tinggal di daerah "+ inputRegion +", sesuaikan dengan kondisi daerah, lingkungan dan iklim daerah tempat saya tinggal, jelaskan dengan 5 poin yaitu mengenai material rumah yaitu material yang cocok digunakan didaerah tempat saya tinggal, energi rumah yaitu bagaimana cara yang cocok untuk mendapatkan energi rumahan sesuai dengan lingkungan tempat tinggal saya, sanitasi yaitu bagaimana sanitasi yang baik sesuai lingkungan tempat tinggal saya, pengelolaan limbah yaitu bagaimana penanganan atau sistem pengolahan limbah yang tepat sesuai daerah saya, dan ventilasi yaitu bagaimana sistem ventilasi yang baik sesuai dengan lingkungan tempat tinggal saya. Pisahkan untuk setiap poin dengan tanda ;";
