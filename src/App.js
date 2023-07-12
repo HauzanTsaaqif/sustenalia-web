@@ -14,6 +14,7 @@ import img_trivia5 from './assets/img-trivia5.svg';
 import img_trivia6 from './assets/img-trivia6.svg';
 
 function App() {
+
   return (
     <div className="App">
       <Header />
@@ -21,7 +22,7 @@ function App() {
       <div className='container-cover'>
         
         <div className='image-overlay'>
-          <img src={process} alt='Quotes Cover'/>
+          <img src={quotes_cover} alt='Quotes Cover'/>
         </div>
       </div>
 
@@ -34,7 +35,7 @@ function App() {
 
       <div className='trivia_1'>
         <article>
-          <h1>{process.env.TEST}</h1>
+          <h1>SUSTAINABILITY</h1>
           <p>Sustainability atau keberlanjutan adalah konsep yang berkaitan dengan memenuhi kebutuhan saat ini tanpa mengorbankan kemampuan generasi masa depan untuk memenuhi kebutuhan mereka. Ini melibatkan pengelolaan sumber daya secara bijaksana, melindungi lingkungan alami, dan mempertimbangkan dampak sosial dalam pengambilan keputusan.</p>
           <div className='layer_button'><Link to="/login-page"><button>MULAI</button></Link></div>
         </article>

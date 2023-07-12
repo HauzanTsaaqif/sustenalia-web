@@ -29,7 +29,9 @@ function GeneratePage() {
 
   let num = 1;
 
-  console.log("aaaa1" + process.env.TEST);
+  const test = process.env.POSTGRES_DATABASE;
+
+  console.log("aaaa1" + test);
 
   const generatePrompt = () => {
     const endpoint = "https://api.openai.com/v1/completions";
