@@ -33,7 +33,6 @@ function GeneratePage() {
   const generatePrompt = () => {
     const endpoint = "https://api.openai.com/v1/completions";
     const API_KEY = process.env.API_KEY;
-    const API_KEY = "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";
     const model_engine = "text-davinci-003";
     const prompt =
       "saya tinggal di Purwakarta di Ciganea, berikan saya saran rumah yang ramah lingkungan yang berkelanjutan sesuai dengan daerah tempat tinggal saya, jelaskan dengan 5 poin yaitu mengenai material rumah, energi rumah, sanitasi, pengelolaan limbah, dan ventilasi";
