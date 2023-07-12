@@ -1195,12 +1195,14 @@
   font-size: 18px;
   font-weight: 400;
   margin: 0;
+  margin-bottom: 20px;
 }
 
 .vector-container b{
   font-size: 19px;
   margin: 0;
-  line-height: 40px;
+  line-height: 30px;
+  font-weight: 500;
 }
 
 .deskripsi-rumah {

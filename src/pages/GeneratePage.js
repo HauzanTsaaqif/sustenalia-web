@@ -5,7 +5,7 @@ import React, { useState } from 'react';
 import { Box, Slider } from "@mui/material";
 import axios from 'axios';
 
-require('dotenv').config();
+
 
 import bg_blur from '../assets/background-blur.svg';
 import bg_img_login from '../assets/8018276removebgpreview-1@2x.png';
@@ -22,7 +22,8 @@ import imghouse3d from '../assets/hugethreebedroomremovebgpreview-1@2x.png';
 
 import Header from '../component/Header';
 import Footer from '../component/Footer';
-import GPT3Prompt from '../component/Gpt'
+import GPT3Prompt from '../component/Gpt';
+
 
 function GeneratePage() {
   const [resultGenerate, setResultGenerate] = useState('');
@@ -30,12 +31,16 @@ function GeneratePage() {
 
   let num = 1;
 
+  console.log(process.env.API_KEY)
+
   const generatePrompt = () => {
     const endpoint = "https://api.openai.com/v1/completions";
-    const API_KEY = process.env.API_KEY;
+    const API_KEY = "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";
     const model_engine = "text-davinci-003";
     const prompt =
-      "saya tinggal di Purwakarta di Ciganea, berikan saya saran rumah yang ramah lingkungan yang berkelanjutan sesuai dengan daerah tempat tinggal saya, jelaskan dengan 5 poin yaitu mengenai material rumah, energi rumah, sanitasi, pengelolaan limbah, dan ventilasi";
+      "Berikan saya saran rumah yang ramah lingkungan dan berkelanjutan jika saya tinggal di daerah "+ inputRegion +", sesuaikan dengan kondisi daerah, lingkungan dan iklim daerah tempat saya tinggal, jelaskan dengan 5 poin yaitu mengenai material rumah yaitu material yang cocok digunakan didaerah tempat saya tinggal, energi rumah yaitu bagaimana cara yang cocok untuk mendapatkan energi rumahan sesuai dengan lingkungan tempat tinggal saya, sanitasi yaitu bagaimana sanitasi yang baik sesuai lingkungan tempat tinggal saya, pengelolaan limbah yaitu bagaimana penanganan atau sistem pengolahan limbah yang tepat sesuai daerah saya, dan ventilasi yaitu bagaimana sistem ventilasi yang baik sesuai dengan lingkungan tempat tinggal saya. Pisahkan untuk setiap poin dengan tanda ;";
+
+    console.log(prompt);
 
     axios
       .post(
@@ -57,6 +62,7 @@ function GeneratePage() {
       .then((response) => {
         if (response.status === 200) {
           const result = response.data.choices[0].text.trim();
+          setResultGenerate(result)
           console.log(result);
         } else {
           throw new Error('API request failed');
@@ -69,24 +75,6 @@ function GeneratePage() {
   const finalResult  = resultGenerate.split(";");
 
   console.log(finalResult);
-
-  const generateAI = async () => {
-    try {
-      const response = await axios.get('http://localhost:3001/generateAI', {
-        params: {
-          prompt: 'saya tinggal dipurwakarta di ciganea, berikan saya saran rumah yang ramah lingkungan yang berkelanjutan sesuai dengan daerah tempat tinggal saya, jelaskan dengan 5 poin yaitu mengenai material rumah, energi rumah, sanitasi, pengelolaan limbah, dan ventilasi'
-        }
-      });
-
-      if (response.status === 200) {
-        setResultGenerate(response.data.result);
-      } else {
-        console.error(response.data.error);
-      }
-    } catch (error) {
-      console.error(error);
-    }
-  };
 
   return (
     <div className="App">
@@ -256,11 +244,11 @@ function GeneratePage() {
         <div className="vector-container">
           {finalResult.map((item, index) => {
             const currentNum = num;
-            if (index % 2 !== 1) {
+            if (index % 1 !== 1) {
               num++;
             }
             return (
-            <p key={index}>{index % 2 !== 1 ? <b>{(currentNum)}. {item}</b>: item}</p>
+            <p key={index}>{index % 1 !== 1 ? <b>{(currentNum)}. {item}</b>: item}</p>
             );
           })}
           
