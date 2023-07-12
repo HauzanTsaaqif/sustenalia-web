@@ -5,8 +5,6 @@ import React, { useState } from 'react';
 import { Box, Slider } from "@mui/material";
 import axios from 'axios';
 
-
-
 import bg_blur from '../assets/background-blur.svg';
 import bg_img_login from '../assets/8018276removebgpreview-1@2x.png';
 import mapsearch from '../assets/mdimapsearch.svg';
@@ -30,6 +28,8 @@ function GeneratePage() {
   const [inputRegion, setInputRegion] = useState('');
 
   let num = 1;
+
+  console.log("aaaa" + process.env.TEST);
 
   const generatePrompt = () => {
     const endpoint = "https://api.openai.com/v1/completions";
