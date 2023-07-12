@@ -30,7 +30,7 @@ function GeneratePage() {
 
   const generatePrompt = () => {
     const endpoint = "https://api.openai.com/v1/completions";
-    const API_KEY = "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";
+    const API_KEY = "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";
     const model_engine = "text-davinci-003";
     console.log(inputRegion);
     const prompt =
