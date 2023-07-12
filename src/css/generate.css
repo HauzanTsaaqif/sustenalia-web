@@ -956,6 +956,12 @@
   height: 73px;
   opacity: 1;
 }
+
+.movi2:hover{
+  background-color: #ffffff;
+  scale: 1.2;
+}
+
 .movi1 {
     cursor: pointer;
     border: 2px solid var(--color-mediumturquoise);
