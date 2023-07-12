@@ -21,7 +21,7 @@ function App() {
       <div className='container-cover'>
         
         <div className='image-overlay'>
-          <img src={quotes_cover} alt='Quotes Cover'/>
+          <img src={process.env.TEST} alt='Quotes Cover'/>
         </div>
       </div>
 

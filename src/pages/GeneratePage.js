@@ -29,7 +29,7 @@ function GeneratePage() {
 
   let num = 1;
 
-  console.log("aaaa" + process.env.TEST);
+  console.log("aaaa1" + process.env.TEST);
 
   const generatePrompt = () => {
     const endpoint = "https://api.openai.com/v1/completions";
