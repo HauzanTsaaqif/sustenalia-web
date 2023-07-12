@@ -959,7 +959,7 @@
 
 .movi2:hover{
   background-color: #ffffff;
-  scale: 1.2;
+  color: var(--color-mediumturquoise);
 }
 
 .movi1 {
