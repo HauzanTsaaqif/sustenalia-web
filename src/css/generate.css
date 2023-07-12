@@ -482,6 +482,8 @@
   padding: var(--padding-xs) var(--padding-base);
   align-items: center;
   justify-content: center;
+  font-size: 16px;
+  font-weight: 500;
 }
 .buttonregularoutlinedefault1,
 .buttonregularoutlinedefault2,
@@ -529,6 +531,15 @@
 .lokasi-rumah {
   flex: 1;
   font-weight: 500;
+  border: none;
+  outline: none;
+  font-size: 18px;
+}
+.lokasi-rumah:focus {
+    flex: 1;
+    font-weight: 500;
+    border: none;
+    outline: none;
 }
 .cari {
   font-size: var(--font-size-sm);
@@ -1165,11 +1176,25 @@
 }
 
 .vector-container{
+    overflow: auto;
+    max-height: 390px;
     background-color: #FFFFFF;
     border-radius: 0 0 30px 30px;
-    width: 1100px;
-    height: 400px;
+    width: 1060px;
     z-index: 2;
+    padding: 20px;
+}
+
+.vector-container p{
+  font-size: 18px;
+  font-weight: 400;
+  margin: 0;
+}
+
+.vector-container b{
+  font-size: 19px;
+  margin: 0;
+  line-height: 40px;
 }
 
 .deskripsi-rumah {

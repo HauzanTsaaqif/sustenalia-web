@@ -3,6 +3,7 @@ import '../css/generate.css'
 import { Link } from 'react-router-dom';
 import React, { useState } from 'react';
 import { Box, Slider } from "@mui/material";
+import axios from 'axios';
 
 import bg_blur from '../assets/background-blur.svg';
 import bg_img_login from '../assets/8018276removebgpreview-1@2x.png';
@@ -19,8 +20,75 @@ import imghouse3d from '../assets/hugethreebedroomremovebgpreview-1@2x.png';
 
 import Header from '../component/Header';
 import Footer from '../component/Footer';
+import GPT3Prompt from '../component/Gpt'
 
 function GeneratePage() {
+  const [resultGenerate, setResultGenerate] = useState('');
+  const [inputRegion, setInputRegion] = useState('');
+
+  let num = 1;
+
+  const generatePrompt = () => {
+    const endpoint = "https://api.openai.com/v1/completions";
+    const API_KEY = "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";
+    const model_engine = "text-davinci-003";
+    console.log(inputRegion);
+    const prompt =
+      "saya tinggal di "+ inputRegion +", berikan saya saran rumah yang ramah lingkungan yang berkelanjutan sesuai dengan daerah tempat tinggal saya, jelaskan dengan 5 poin yaitu mengenai material rumah, energi rumah, sanitasi, pengelolaan limbah, dan ventilasi. pisahkan setiap poin dengan tanda ;";
+
+    axios
+      .post(
+        endpoint,
+        {
+          model: model_engine,
+          prompt: prompt,
+          max_tokens: 1000,
+          temperature: 0,
+          n: 1,
+        },
+        {
+          headers: {
+            'Content-Type': 'application/json',
+            Authorization: `Bearer ${API_KEY}`,
+          },
+        }
+      )
+      .then((response) => {
+        if (response.status === 200) {
+          const result = response.data.choices[0].text.trim();
+          setResultGenerate(result);
+          const finalResult  = resultGenerate.split(";");
+          console.log(result);
+          console.log(finalResult);
+        } else {
+          throw new Error('API request failed');
+        }
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  }
+  const finalResult  = resultGenerate.split(";");
+
+  console.log(finalResult);
+
+  const generateAI = async () => {
+    try {
+      const response = await axios.get('http://localhost:3001/generateAI', {
+        params: {
+          prompt: 'saya tinggal dipurwakarta di ciganea, berikan saya saran rumah yang ramah lingkungan yang berkelanjutan sesuai dengan daerah tempat tinggal saya, jelaskan dengan 5 poin yaitu mengenai material rumah, energi rumah, sanitasi, pengelolaan limbah, dan ventilasi'
+        }
+      });
+
+      if (response.status === 200) {
+        setResultGenerate(response.data.result);
+      } else {
+        console.error(response.data.error);
+      }
+    } catch (error) {
+      console.error(error);
+    }
+  };
 
   return (
     <div className="App">
@@ -130,7 +198,7 @@ function GeneratePage() {
           alt=""
           src={fluentloc}
         />
-        <div className="lokasi-rumah">Lokasi Rumah</div>
+        <input type='text' className="lokasi-rumah" placeholder='Pilih lokasi..' value={inputRegion} onChange={(e) => setInputRegion(e.target.value)}/>
         <button className="search-button">
           <div className="cari">cari</div>
           <img
@@ -176,10 +244,10 @@ function GeneratePage() {
 
       <img className="mdimap-search-icon" alt="" src={mapsearch} />
 
-      <div className="movi-parent-1" >
+      <div className="movi-parent-1" onClick={generatePrompt}>
         <button
           className="movi2"
-          data-animate-on-scroll
+          data-animate-on-scroll 
         />
         <div className="inventrio2">Generate</div>
       </div>
@@ -188,9 +256,18 @@ function GeneratePage() {
       <div className="rectangle-parent">
         <div className="frame-child3" />
         <div className="vector-container">
+          {finalResult.map((item, index) => {
+            const currentNum = num;
+            if (index % 2 !== 1) {
+              num++;
+            }
+            return (
+            <p key={index}>{index % 2 !== 1 ? <b>{(currentNum)}. {item}</b>: item}</p>
+            );
+          })}
           
         </div>
-        <div className="deskripsi-rumah">Deskripsi Rumah</div>
+        <div className="deskripsi-rumah">Rekomendasi Rumah</div>
       </div>
       <div className="design-rumah-child2" />
       <div className="design-rumah-child2" />
@@ -198,6 +275,7 @@ function GeneratePage() {
     </div>
       
       <Footer />
+      <GPT3Prompt/>
     </div>
   );
 }

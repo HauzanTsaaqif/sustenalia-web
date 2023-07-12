@@ -38,6 +38,11 @@ li{
     font-weight: 500;
 }
 
+li:hover{
+    color: #05F0FF;
+    scale: 1.1;
+}
+
 a{
     align-self: center;
 }
@@ -58,8 +63,18 @@ button{
     margin-right: 12px;
 }
 
+.signup-btn:hover{
+    background-color: #ffffff;
+    scale: 1.1;
+}
+
 .login-btn{
     background-color: #05F0FF;
     color: #01032D;
     margin-right: 30px;
+}
+
+.login-btn:hover{
+    background-color: #ffffff;
+    scale: 1.1;
 }

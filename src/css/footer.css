@@ -48,6 +48,10 @@
   padding-bottom: 4%;
 }
 
+.footbar_navigation td:hover{
+  color: rgb(163, 163, 163);
+}
+
 .copyright_container{
   display: flex;
   justify-content: center;
