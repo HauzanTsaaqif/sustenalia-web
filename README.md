@@ -1,3 +1,6 @@
+# About
+an architectural website intended for property consumers so they can get 3D house plan designs automatically and also recommendations for sustainable eco-friendly home systems based solely on input data related to house specifications desired by property consumers, so that they can help the home building process become more efficient and can help to create an eco-friendly and sustainable urban ecosystem.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
