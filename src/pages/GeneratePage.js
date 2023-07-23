@@ -29,7 +29,7 @@ function GeneratePage() {
 
   let num = 1;
 
-  const api_key = process.env.REACT_APP_API_KEY;
+  const api_key = process.env.REACT_APP_API_AZPI;
 
   const generatePrompt = () => {
     const endpoint = "https://api.openai.com/v1/completions";
